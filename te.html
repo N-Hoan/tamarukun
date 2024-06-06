@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./te.css">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+    <title>たまる君</title>
+</head>
+<body>
+    <div class="headerMenu">
+        <div class="menuIcon">
+            <div class="hamburgerMenu">
+                <div class="hamburgerBar hb1"></div>
+                <div class="hamburgerBar hb2"></div>
+                <div class="hamburgerBar hb3"></div>
+            </div>
+        </div>
+        <div class="menuList">
+            <ul>
+                <li><a href="./userInfo.html">ログイン</a></li>
+                <li><a href="./list.html">アカウント情報変更</a></li>
+                <li class="admin-menu"><a href="./manager.html">ほしいものリスト</a></li>
+                <li class="admin-menu"><a href="./correction.html">シフトボード</a></li>
+                <li><a href="./login.html" id="logout">ログアウト</a></li>
+            </ul>
+        </div>
+    </div>
+    <main>
+        <h1>欲しいものリスト</h1>
+        <form id="registration-form" method="get">
+            <div id="registrationDialog">
+                    <div class="name">
+                        <input type="text" id='id' name="name" placeholder="欲しいものの名前"  />
+                    </div>
+                    <div class="price">
+                        <input type="text" id='price' name="price" placeholder="金額"  />
+                    </div>
+                    <div class="term">
+                        <input type="date" id="term" name="term" placeholder="期間">
+                    </div>
+                    <div class="photo">
+                        <input accept="image/*" type="file" id="photo" name="photo" placeholder="写真" />
+                    </div>
+                    <input type="submit" name="register" id="register" value="登録">
+            </div>
+        </form>
+    </main>
+</body>
+<script src="./te.js"></script>
+</html>
