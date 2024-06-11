@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/common.css">
+  <title>login</title>
+</head>
+
+<body>
+  <header>
+
+    <h1>貯まる君</h1>
+  </header>
+  <main>
+    <div class="main-contents">
+      <div class="content">
+        <h1 class="center">アカウントログイン</h1>
+        <hr>
+        <form method="post">
+          <div class="wrap-box flex-even">
+            <div class="center input-item">
+              <label for="memberId">
+                  <h2>MALL</h2>
+              </label>
+              <div class="input-group">
+                  <img src="/img/mail.png" alt="メールロゴ">
+                  <input type="text" id="mail" name="mail" placeholder="メールアドレスを入力してください" required>
+              </div>
+          </div>
+            <div class="center input-item">
+              <label for="password">
+                <h2>パスワード</h2>
+              </label>
+              <div class="input-group">
+                <img src="/img/key.png" alt="鍵ロゴ">
+                <input type="password" id="password" name="password" placeholder="パスワードを入力してください" required>
+              </div>
+
+            </div>
+            <div class="submit">
+              <input type="submit" id="submit" value="ログイン">
+            </div>
+            <div><a href="./adduser.html">新規登録はこちら</a></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+  <script>
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        window.location.href = './style/main.html'; // Thay đổi thành trang bạn muốn chuyển hướng tới
+    });
+</script>
+</body>
+
+</html>
