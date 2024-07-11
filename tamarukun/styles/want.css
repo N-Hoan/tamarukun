@@ -1,0 +1,186 @@
+html{
+    /* bodyをheight 100%にする */
+    height: 100%;
+}
+
+header{
+    background-color: #8E5DB5;
+    text-align: center;
+    color: #FFFF;
+    text-shadow: 1px 1px 1px black;
+    padding: 17px;
+
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure it stays on top */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+li{
+    list-style: none;
+}
+body{
+    background-image:url(../img/pig.jpg);
+    background-attachment: fixed;
+    background-repeat:  no-repeat; 
+    background-size: cover;
+    background-position: center;
+    /* bodyをheight 100%にする */
+    height: 100%;
+    background-size: 100% 100%;
+    /* 真ん中横 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+}
+main{
+    margin-top: 150px;
+}
+
+/* /ここからハンバーガーメニュー/ / */
+.headerMenu {
+    text-align: center;
+    color: #FFFF;
+    text-shadow: 1px 1px 1px black;
+    padding: 17px;
+    width: 100%;
+    position: fixed;
+}
+
+.menuIcon {
+    margin-top: 0px;
+    width: 97%;
+    position: relative;
+}
+
+.hamburgerMenu {
+    position: absolute;
+    height: 3.5em;
+    width: 2em;
+    top: 1em;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 100;
+    margin-top: 0px;
+}
+
+.hamburgerBar {
+    opacity: 1;
+    height: 0.25em;
+    width: 2.5em;
+    background-color: white;
+    box-shadow: 1px 1px 0 skyblue,
+        1px -1px 0 skyblue,
+        -1px 1px 0 skyblue,
+        -1px -1px 0 skyblue;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.25s ease-in-out;
+}
+
+.hb1 {
+    top: 25%;
+}
+
+.hb2 {
+    top: 50%;
+    z-index: 100;
+}
+
+.hb3 {
+    top: 75%;
+}
+
+.menuOpen .hb1 {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.menuOpen .hb2 {
+    height: 0.3em;
+    width: 0.3em;
+    background-color: white;
+    box-shadow: 1px 0px 0 white,
+        -1px 0px 0 white,
+        0px 1px 0 white,
+        0px -1px 0 white;
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.menuOpen .hb3 {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(225deg);
+}
+
+.menuList {
+    pointer-events: auto;
+    width: 25%;
+    height: 100%;
+    z-index: 50;
+    padding: 5em 5em 3em 0em;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    background-color: skyblue;
+    transition: 0.25s ease-in-out;
+    font-size: 125%;
+    color: black;
+}
+
+.menuOpen .menuList {
+    left: 75%;
+    box-shadow: -1px 0 1em rgba(0, 0, 0, 0.5);
+}
+/* / ここまでハンバーガーメニュー  */
+
+input[type="text"],input[type="date"]{
+  
+    color:black; /* ここで入力された文字の色を設定 */
+    border: 1px solid black; /* 枠線の色も変更 */
+    background-color: #F5F5F5;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: calc(100% - 22px); /* パディングとボーダーを考慮して幅を設定 */
+    
+    
+}
+
+input[type="file"]{
+    color:#4169e1; /* ここで入力された文字の色を設定 */
+    border: 1px solid black; /* 枠線の色も変更 */
+    background-color: #F5F5F5;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: calc(100% - 22px); /* パディングとボーダーを考慮して幅を設定 */
+}
+input[type="text"]::placeholder {
+    color: black; /* プレースホルダーの色 */
+}
+input[type="submit"]{
+    color: black;
+    background-color: #FFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px; /* ボタンを丸くする */
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.submit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="submit"]:hover {
+    background-color: #4169e1; /* ホバー時の背景色 */
+}

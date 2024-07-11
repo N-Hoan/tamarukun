@@ -1,0 +1,330 @@
+/*--------common.css----------*/
+
+/* * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} */
+html{
+    height: 100%;
+}
+/* html,
+body {
+    width: 100%;
+    /* height: 100%; */
+    /* background-color: white;
+    color: #8E5DB5;
+    overflow: hidden;
+    bottom: 0px;
+    background-image:url(../img/pig.jpg);
+} */ 
+
+body{
+    background-image:url(../img/pig.jpg);
+    background-attachment: fixed;
+    background-repeat:  no-repeat; 
+    background-size: cover;
+    background-position: center;
+    /* bodyをheight 100%にする */
+    height: 100%;
+    width: 100%;
+    bottom: 0px;
+    overflow: hidden;
+    background-size: 100% 100%;
+    /* 真ん中横 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+}
+
+hr {
+    margin: 5%;
+    height: 1px;
+    background-color: gray;
+    border: none;
+}
+header{
+    background-color: #8E5DB5;
+    text-align: center;
+    color: #FFFF;
+    text-shadow: 1px 1px 1px black;
+    padding: 17px;
+
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure it stays on top */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+li{
+    list-style: none;
+}
+/* header{
+    background-color: #8E5DB5;
+    text-align: center;
+    color: #FFFF;
+    text-shadow: 1px 1px 1px black;
+    padding: 17px;
+
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure it stays on top */
+/* } */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 120px; /* Adjust padding to ensure content is not hidden */
+    /* max-height: calc(100vh - 120px);
+    overflow: auto;
+}
+.main-contents{
+    width: 40%;
+    margin-top: 30px;
+    padding: 20px;
+    overflow: auto; 
+
+    border:1px solid #8E5DB5;
+    background-color: white;
+
+    
+    text-align: center;
+    position: relative;
+    box-sizing: border-box; 
+
+}
+
+.input-item {
+    margin-bottom: 2.5%;
+    padding: 0.5em;
+}
+.input-group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input-group img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+input {
+    width: 90%;
+    padding: 1em;
+
+    border: none;
+    border-radius: 0.5em;
+    background-color: rgb(243, 246, 243);
+    box-shadow: inset 0.1em 0.1em 3px rgba(0, 0, 0, 0.5);
+
+    transition: 0.2s ease;
+}
+
+input:focus {
+    border: none;
+    outline: none;
+    box-shadow: inset 0.1em 0.1em 3px rgba(0, 0, 0, 0.2);
+}
+
+input:placeholder-shown {
+    background-color: rgb(255, 245, 253);
+}
+
+input[type="submit"] {
+    color: rgba(255, 255, 255, 1);
+    font-size: 1em;
+
+    padding: 2%;
+    width: 5em;
+    /* height: fit-content; */
+
+    border: none;
+    background-color:#8E5DB5 ;
+    border-bottom: 4px solid #8E5DB5;
+    box-shadow: 0.1em 0.1em 3px rgba(0, 0, 0, 0.5);
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    background:  rgb(117, 174, 240);
+    transform: translate3d(0, 4px, 0);
+    border-bottom: none;
+}
+
+input[type="submit"]:active {
+    box-shadow: none;
+    transform: translate(0.1em, 0.1em);
+}
+
+.submit {
+    text-align: center;
+    right: 20%;
+}
+
+.e-message {
+    color: rgba(255, 055, 055, 1);
+}
+
+.error-box {
+    transition: 0.5s ease;
+    background-color: rgba(255, 255, 155, 1);
+}
+/* /ここからハンバーガーメニュー/ / */
+.headerMenu {
+    text-align: center;
+    color: #FFFF;
+    text-shadow: 1px 1px 1px black;
+    padding: 17px;
+    width: 100%;
+    position: fixed;
+}
+
+.menuIcon {
+    margin-top: 0px;
+    width: 97%;
+    position: relative;
+}
+
+.hamburgerMenu {
+    position: absolute;
+    height: 3.5em;
+    width: 2em;
+    top: 1em;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 100;
+    margin-top: 0px;
+}
+
+.hamburgerBar {
+    opacity: 1;
+    height: 0.25em;
+    width: 2.5em;
+    background-color: white;
+    box-shadow: 1px 1px 0 skyblue,
+        1px -1px 0 skyblue,
+        -1px 1px 0 skyblue,
+        -1px -1px 0 skyblue;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.25s ease-in-out;
+}
+
+.hb1 {
+    top: 25%;
+}
+
+.hb2 {
+    top: 50%;
+    z-index: 100;
+}
+
+.hb3 {
+    top: 75%;
+}
+
+.menuOpen .hb1 {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.menuOpen .hb2 {
+    height: 0.3em;
+    width: 0.3em;
+    background-color: white;
+    box-shadow: 1px 0px 0 white,
+        -1px 0px 0 white,
+        0px 1px 0 white,
+        0px -1px 0 white;
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.menuOpen .hb3 {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(225deg);
+}
+
+.menuList {
+    pointer-events: auto;
+    width: 25%;
+    height: 100%;
+    z-index: 50;
+    padding: 5em 5em 3em 0em;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    background-color: skyblue;
+    transition: 0.25s ease-in-out;
+    font-size: 125%;
+    color: black;
+}
+
+.menuOpen .menuList {
+    left: 75%;
+    box-shadow: -1px 0 1em rgba(0, 0, 0, 0.5);
+}
+/* / ここまでハンバーガーメニュー  */
+
+/* footer{
+    background-color: #8E5DB5 ;
+    text-align: center;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    height: 80px; 
+    bottom: 0px;
+} */
+/* footer div{
+    color: #fdfcfd;
+    text-align: center;
+
+    top: 0px;
+} */
+/* footer hr{
+    margin: 5px;
+    width: auto;
+    height: 1px;
+    background-color: rgb(211, 70, 157);
+    border: none;
+    position:inherit;
+} */
+/* footer nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  } */
+/* footer img{
+    width: 30px;
+    height: 30px;
+} */
+/* @media screen and (min-width: 481px) {
+    .head-image {
+        width: 40%;
+        display: flex;
+        height: max-content;
+    }
+
+    .entry-box {
+        width: 60%;
+        padding: 2.5%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .head-image {
+        display: none;
+    }
+
+    .entry-box {
+        width: 100%;
+        padding: 10%;
+    }
+} */

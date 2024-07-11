@@ -1,0 +1,150 @@
+html{
+    height: 100%;
+}
+
+body{
+    background-image:url(../img/pig.jpg);
+    background-attachment: fixed;
+    background-repeat:  no-repeat; 
+    background-size: cover;
+    background-position: center;
+    /* bodyをheight 100%にする */
+    height: 100%;
+    /* width: 100%;
+    bottom: 0px;
+    overflow: hidden; */
+    background-size: 100% 100%;
+    /* 真ん中横 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+}
+
+hr {
+    margin: 5%;
+    height: 1px;
+    background-color: gray;
+    border: none;
+}
+header{
+    background-color: #8E5DB5;
+    text-align: center;
+    color: #FFFF;
+    text-shadow: 1px 1px 1px black;
+    padding: 17px;
+
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure it stays on top */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+li{
+    list-style: none;
+}
+
+main {
+    width: 100%;
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-contents{
+    width: 40%;
+    margin-top: 30px;
+    padding: 20px;
+    overflow: auto; 
+
+    border:1px solid #8E5DB5;
+    background-color: white;
+
+    
+    text-align: center;
+    position: relative;
+    box-sizing: border-box; 
+
+}
+
+.input-item {
+    margin-bottom: 2.5%;
+    padding: 0.5em;
+}
+.input-group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input-group img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+input {
+    width: 90%;
+    padding: 1em;
+
+    border: none;
+    border-radius: 0.5em;
+    background-color: rgb(243, 246, 243);
+    box-shadow: inset 0.1em 0.1em 3px rgba(0, 0, 0, 0.5);
+
+    transition: 0.2s ease;
+}
+
+input:focus {
+    border: none;
+    outline: none;
+    box-shadow: inset 0.1em 0.1em 3px rgba(0, 0, 0, 0.2);
+}
+
+input:placeholder-shown {
+    background-color: rgb(255, 245, 253);
+}
+
+input[type="submit"] {
+    color: rgba(255, 255, 255, 1);
+    font-size: 1em;
+
+    padding: 2%;
+    width: 5em;
+    /* height: fit-content; */
+
+    border: none;
+    background-color:#8E5DB5 ;
+    border-bottom: 4px solid #8E5DB5;
+    box-shadow: 0.1em 0.1em 3px rgba(0, 0, 0, 0.5);
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    background:  rgb(117, 174, 240);
+    transform: translate3d(0, 4px, 0);
+    border-bottom: none;
+}
+
+input[type="submit"]:active {
+    box-shadow: none;
+    transform: translate(0.1em, 0.1em);
+}
+
+.submit {
+    text-align: center;
+    right: 20%;
+}
+
+.e-message {
+    color: rgba(255, 055, 055, 1);
+}
+
+.error-box {
+    transition: 0.5s ease;
+    background-color: rgba(255, 255, 155, 1);
+}
+.adduser{
+    margin-top: 20px;
+}

@@ -1,0 +1,163 @@
+html{
+    height: 100%;
+}
+main{
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-top: 0px; */
+}
+body{
+    background-image:url(../img/pig.jpg);
+    background-attachment: fixed;
+    background-repeat:  no-repeat; 
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    background-size: 100% 100%;
+    /* 真ん中横 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+}
+
+hr {
+    margin: 5%;
+    height: 1px;
+    background-color: gray;
+    border: none;
+}
+header{
+    background-color: #8E5DB5;
+    text-align: center;
+    color: #FFFF;
+    text-shadow: 1px 1px 1px black;
+    padding: 17px;
+
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    top: 0;
+    z-index: 1000; /* Ensure it stays on top */
+    display:grid;
+    flex-direction: column;
+    align-items: center;
+}
+li{
+    list-style: none;
+}
+h1{
+    margin: 0px;
+}
+.h2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0px;
+}
+.status{
+    font-size: 80px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.goal{
+    font-size: medium;
+}
+/* /ここからハンバーガーメニュー/ / */
+.headerMenu {
+    text-align: center;
+    color: #FFFF;
+    text-shadow: 1px 1px 1px black;
+    padding: 17px;
+    width: 100%;
+    position: fixed;
+}
+
+.menuIcon {
+    margin-top: 0px;
+    width: 97%;
+    position: relative;
+}
+
+.hamburgerMenu {
+    position: absolute;
+    height: 3.5em;
+    width: 2em;
+    top: 1em;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 100;
+    margin-top: 0px;
+}
+
+.hamburgerBar {
+    opacity: 1;
+    height: 0.25em;
+    width: 2.5em;
+    background-color: white;
+    box-shadow: 1px 1px 0 skyblue,
+        1px -1px 0 skyblue,
+        -1px 1px 0 skyblue,
+        -1px -1px 0 skyblue;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.25s ease-in-out;
+}
+
+.hb1 {
+    top: 25%;
+}
+
+.hb2 {
+    top: 50%;
+    z-index: 100;
+}
+
+.hb3 {
+    top: 75%;
+}
+
+.menuOpen .hb1 {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.menuOpen .hb2 {
+    height: 0.3em;
+    width: 0.3em;
+    background-color: white;
+    box-shadow: 1px 0px 0 white,
+        -1px 0px 0 white,
+        0px 1px 0 white,
+        0px -1px 0 white;
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.menuOpen .hb3 {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(225deg);
+}
+
+.menuList {
+    pointer-events: auto;
+    width: 25%;
+    height: 100%;
+    z-index: 50;
+    padding: 5em 5em 3em 0em;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    background-color: skyblue;
+    transition: 0.25s ease-in-out;
+    font-size: 125%;
+    color: black;
+}
+
+.menuOpen .menuList {
+    left: 75%;
+    box-shadow: -1px 0 1em rgba(0, 0, 0, 0.5);
+}
+/* / ここまでハンバーガーメニュー  */
